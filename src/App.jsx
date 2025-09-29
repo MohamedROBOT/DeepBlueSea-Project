@@ -4,7 +4,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Livemap from "./components/Livemap/Livemap";
 import Predictions from "./components/Predictions/Predictions";
 import Tagdetails from "./components/Tagdetails/Tagdetails";
-
+import DashLogs from "./components/DashLogs/DashLogs";
 import Chatbot from "./components/Chatbot/Chatbot";
 import NotFound from "./NotFound";
 

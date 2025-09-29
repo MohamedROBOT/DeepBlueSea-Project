@@ -50,7 +50,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
   const {pathname} = useLocation();
 // -translate-x-4/5
   return (
-    <Sidebar className={`max-h-screen  overflow-hidden my-nav z-50 transition-width duration-300 ${!sidebarToggle ? "translate-x-0 fixed lg:sticky inset-0" : "-translate-x-4/5  fixed "}`}>
+    <Sidebar className={`max-h-screen z-50  overflow-hidden my-nav  transition-width duration-300 ${!sidebarToggle ? "translate-x-0 fixed lg:sticky inset-0" : "-translate-x-4/5  fixed "}`}>
       <span onClick={() => setSidebarToggle(!sidebarToggle)} className="text-silver max-w-max flex ms-auto items-center cursor-pointer">
         {
           sidebarToggle ? <IoList className="text-2xl" /> : <IoCloseSharp className="text-2xl" />
