@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@theme {
+  --color-onyx: #051527;       /* bg */
+  --color-midnight: #091C2D;   /* card1 */
+  --color-charcoal: #1A2332;   /* card2 */
+  --color-teal: #1A5D74;       /* chat */
+  --color-steel: #465869;      /* stroke */
+  --color-silver: #ACBAC9;     /* ltext */
+}
+
+@layer base{
+ body {
+   font-family: 'Inter', sans-serif;
+   @apply bg-onyx text-white
+ }
+}
+
+@layer components {
+
+}
+
+@layer utilities { 
+
+}
+
+
+
+.my-nav > div {
+  @apply  rounded-none min-h-screen
+}
