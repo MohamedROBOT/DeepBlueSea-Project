@@ -29,7 +29,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
     },
     {
       label: 'Activity log',
-      path: '/logs',
+      path: '/dashlogs',
       navicon: HiUser
     },
     {

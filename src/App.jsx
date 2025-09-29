@@ -4,7 +4,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Livemap from "./components/Livemap/Livemap";
 import Predictions from "./components/Predictions/Predictions";
 import Tagdetails from "./components/Tagdetails/Tagdetails";
-import Logs from "./components/Logs/Logs";
+
 import Chatbot from "./components/Chatbot/Chatbot";
 import NotFound from "./NotFound";
 
@@ -29,7 +29,7 @@ function App() {
         path: "tagdetails", element: <Tagdetails />
       },
       {
-        path: "logs", element: <Logs />
+        path: "dashlogs", element: <DashLogs />
       },
       {
         path: "chatbot", element: <Chatbot />
