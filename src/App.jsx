@@ -31,9 +31,7 @@ function App() {
       {
         path: "dashlogs", element: <DashLogs />
       },
-      {
-        path: "chatbot", element: <Chatbot />
-      },
+      ,
       {path: "*", element: <NotFound />}
     ]}
     

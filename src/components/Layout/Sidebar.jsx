@@ -37,11 +37,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
       path: '/predictions',
       navicon: FaHeartbeat
     },
-    {
-      label: 'AI Chatbot',
-      path: '/chatbot',
-      navicon: FaFire
-    },
+  
 
   ]
 
