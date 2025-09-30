@@ -119,13 +119,13 @@ export default function Chatbot() {
               </div>
             )}
              {!loading && !question && recommendations.length > 0 && (
-            <div className='px-3 text-[11px] text-silver p-5 flex flex-wrap gap-2'>
+            <div className='px-3 text-[13px] text-silver p-5 flex flex-wrap gap-2'>
               Suggested Questions
               {recommendations.map((rec, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleAsk(rec)}
-                  className='border text-white border-silver/50 text-start px-2 py-1 text-[10px] rounded hover:bg-gray-700'>
+                  className='border text-white border-silver/50 text-start px-2 py-1 text-xs rounded hover:bg-gray-700'>
                   {rec}
                 </button>
               ))}
@@ -142,14 +142,14 @@ export default function Chatbot() {
               onKeyDown={handleKeyPress}
               rows={1}
               placeholder='Ask about sharks...'
-              className='flex-1 p-2 rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none resize-none'
+              className='flex-1 p-1 ps-3 text-sm rounded-md bg-gray-800 text-white border border-gray-600 focus:outline-none resize-none'
               disabled={loading}
             />
             <button
               onClick={() => handleAsk()}
               disabled={loading}
               className='bg-blue-600 p-2 rounded-md cursor-pointer hover:bg-blue-700 transition disabled:opacity-50'>
-              <FiSend size={18} />
+              <FiSend size={14} />
             </button>
           </div>
         </div>

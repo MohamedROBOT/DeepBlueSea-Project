@@ -55,7 +55,7 @@ export async function getRecommendations(setRecs) {
             parts: [
               {
                 text: `Suggest 3 short, engaging questions a user might ask about sharks or the ocean. 
-Return only the questions .`
+Return only the questions do not number or listing them.`
               }
             ]
           }
