@@ -89,18 +89,19 @@ export default function Dashboard() {
       </div>
 
       {/* Map */}
+      <span className='text-xl font-semibold'>Live Map</span>
+
       <div className='bg-[#091C2D] p-4 rounded-xl z-10'>
         <MapContainer
-
           center={[20, -40]}
           zoom={2}
           scrollWheelZoom={true}
-             zoomControl={true}
+          zoomControl={true}
           className='h-[400px] rounded-lg'>
           <TileLayer
             url='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
             subdomains={["a", "b", "c"]}
-            className="z-10"
+            className='z-10'
           />
 
           {sharks.map((shark) => (
