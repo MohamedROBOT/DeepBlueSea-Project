@@ -8,10 +8,12 @@ export default function Layout() {
 
   return (
     <div className='flex flex-row min-h-screen'>
-     
-        {/* {currLocation.pathname !== '/livemap' ? : "" } */}
-        <SidebarComponent />
-      <Chatbot />
+     {
+      (currLocation.pathname !== '/studentmode' && currLocation.pathname !== '/studentmode/sharkquiz') && <SidebarComponent />
+     }
+       
+        {currLocation.pathname !== '/studentmode/sharkquiz' && <Chatbot />}
+      
       <main className={`${currLocation.pathname !== '/livemap' ? 'flex-grow-1 ms-10 p-10' : 'flex-grow-1'}`}>
         <Outlet />
       </main>

@@ -8,6 +8,8 @@ import DashLogs from "./components/DashLogs/DashLogs";
 import NotFound from "./NotFound";
 import SharkDetailsPage from "./components/Livemap/SharkDetailsPage";
 import { SharksProvider } from "./context/SharksContext";
+import StudentMode from "./components/StudentMode/StudentMode";
+import SharkQuiz from "./components/StudentMode/SharkQuiz";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +24,8 @@ function App() {
         { path: "tagdetails", element: <Tagdetails /> },
         { path: "dashlogs", element: <DashLogs /> },
         { path: "livemap/:sharkId", element: <SharkDetailsPage /> },
+        { path: "studentmode", element: <StudentMode /> },
+        { path: "studentmode/sharkquiz", element: <SharkQuiz /> },
         { path: "*", element: <NotFound /> },
       ],
     },

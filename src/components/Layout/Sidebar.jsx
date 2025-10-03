@@ -1,13 +1,13 @@
 "use client";
 import { Sidebar, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
-import {  HiChartPie,  HiTable, HiUser } from "react-icons/hi";
+import {  HiChartPie } from "react-icons/hi";
 import { FaLocationDot } from "react-icons/fa6";
-import {  FaSignal, FaHeartbeat, FaFire } from "react-icons/fa";
+import {  FaSignal, FaHeartbeat } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/images/logo.png"
 import { useState } from "react";
 import { IoCloseSharp, IoList } from "react-icons/io5";
-
+import {PiStudentFill} from "react-icons/pi"
 
 export function SidebarComponent() {
 const [sidebarToggle, setSidebarToggle] = useState(false)
@@ -33,6 +33,8 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
       path: '/predictions',
       navicon: FaHeartbeat
     },
+
+  
   
 
   ]
@@ -75,12 +77,10 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
         </SidebarItemGroup>
         <SidebarItemGroup>
 
-            <SidebarItem   as={Link} icon={HiTable}>
-            Settings
+            <SidebarItem as={Link} to={"/studentmode"}   icon={PiStudentFill}>
+            Student Mode
           </SidebarItem>
-          <SidebarItem as={Link}  icon={HiTable}>
-            Help center
-          </SidebarItem>
+         
         </SidebarItemGroup>
       </SidebarItems>
      </div>
