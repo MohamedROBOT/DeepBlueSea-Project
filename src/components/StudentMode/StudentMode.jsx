@@ -34,7 +34,7 @@ export default function StudentMode() {
         {/* Action Button */}
         <Button
           as={Link}
-          to="studentmode/sharkquiz"
+          to="/studentmode/sharkquiz"
           className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-xl py-3 transition-all duration-300"
         >
           🦈 Take the Shark Quiz
