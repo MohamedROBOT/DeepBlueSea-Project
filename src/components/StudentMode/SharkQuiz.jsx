@@ -86,7 +86,7 @@ function SharkQuiz() {
     <div className="relative flex flex-col p-4 items-center justify-start min-h-screen text-white bg-slate-900 overflow-hidden px-4 sm:px-6 lg:px-8">
       <Button
                 as={Link}
-                to="/studentmode"
+                to="studentmode"
                 className="self-start bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-xl py-3 transition-all duration-300"
               >
                 Go back to student home page
