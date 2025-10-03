@@ -137,8 +137,8 @@ export default function TagDetails() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sharks.map((shark) => (
-          <SharkCard key={shark.id} shark={shark} />
+        {sharks.map((shark, index) => (
+          <SharkCard key={index} shark={shark} />
         ))}
       </div>
   
