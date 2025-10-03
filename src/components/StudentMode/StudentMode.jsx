@@ -1,7 +1,7 @@
 import { Button } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import gamesharkpng from "../../assets/images/sharkgame/gameshark.png";
 export default function StudentMode() {
   return (
     <div className="h-screen flex flex-col items-center   text-white px-4">
@@ -27,7 +27,7 @@ export default function StudentMode() {
         {/* Image */}
         <img
           className="w-48 mx-auto mb-6 drop-shadow-lg animate-bounce"
-          src="/gameshark.png"
+          src={gamesharkpng}
           alt="gameshark"
         />
 

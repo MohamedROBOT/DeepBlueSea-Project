@@ -1,7 +1,7 @@
 import { Button } from "flowbite-react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import sharkgifgame from "../../assets/images/sharkgame/sharkgif.gif"
 const questions = [
   { q: "What do sharks primarily eat?", answers: ["Fish","Chocolate","Pizza","Bread"], correct: 0 },
   { q: "How many shark species exist worldwide?", answers: ["About 50","Over 500","Around 120","Less than 10"], correct: 1 },
@@ -156,7 +156,7 @@ function SharkQuiz() {
           ></div>
 
           <img
-            src="/public/Happy-Like-It-GIF-by-pikaole-unscreen.gif"
+            src={sharkgifgame}
             alt="shark"
             className="absolute  top-0 h-14 sm:h-16 transition-all duration-700 ease-out"
             style={{ left: `${percent}%`, transform: "translateX(-50%)" }}
