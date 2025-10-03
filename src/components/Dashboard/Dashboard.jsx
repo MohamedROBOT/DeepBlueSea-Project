@@ -24,7 +24,7 @@ export default function Dashboard() {
     loadData();
 
     // Auto-refresh every 10s
-    const interval = setInterval(loadData, 2000);
+    const interval = setInterval(loadData, 10000);
     return () => clearInterval(interval);
   }, []);
 

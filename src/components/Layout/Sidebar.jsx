@@ -27,11 +27,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
       path: '/tagdetails',
       navicon: FaSignal
     },
-    {
-      label: 'Activity log',
-      path: '/dashlogs',
-      navicon: HiUser
-    },
+   
     {
       label: 'Predictions',
       path: '/predictions',
@@ -46,7 +42,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
   const {pathname} = useLocation();
 // -translate-x-4/5
   return (
-    <Sidebar className={`max-h-screen z-50  overflow-hidden my-nav  transition-width duration-300 ${!sidebarToggle ? "translate-x-0 fixed lg:sticky inset-0" : "-translate-x-4/5  fixed "}`}>
+    <Sidebar className={`max-h-screen z-50  overflow-hidden my-nav  transition-width duration-300 ${!sidebarToggle ? `translate-x-0 fixed ${pathname === "/livemap" ? "lg:fixed" : "lg:sticky"} inset-0` : "-translate-x-4/5  fixed "}`}>
       <span onClick={() => setSidebarToggle(!sidebarToggle)} className="text-silver max-w-max flex ms-auto items-center cursor-pointer">
         {
           sidebarToggle ? <IoList className="text-2xl" /> : <IoCloseSharp className="text-2xl" />
@@ -57,7 +53,7 @@ const [sidebarToggle, setSidebarToggle] = useState(false)
       <div className="logo text-teal-400 flex items-center gap-x-2 mt-5 mb-10">
           <img src={Logo} className="w-7.5 h-9.5" alt="" />
           <div className="text-2xl">
-            SharkGuid
+            SharkGuard
           </div>
         </div>
        <SidebarItems className="flex flex-col gap-y-2">

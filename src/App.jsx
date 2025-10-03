@@ -5,38 +5,33 @@ import Livemap from "./components/Livemap/Livemap";
 import Predictions from "./components/Predictions/Predictions";
 import Tagdetails from "./components/Tagdetails/Tagdetails";
 import DashLogs from "./components/DashLogs/DashLogs";
-import Chatbot from "./components/Chatbot/Chatbot";
 import NotFound from "./NotFound";
-
-
+import SharkDetailsPage from "./components/Livemap/SharkDetailsPage";
+import { SharksProvider } from "./context/SharksContext";
 
 function App() {
   const router = createBrowserRouter([
-    {path: "", element: <Layout />, children: [
-      {
-        index: true, element: <Dashboard />
-      },
-      {
-        path: "/", element: <Dashboard />
-      },
-      {
-        path: "livemap", element: <Livemap />
-      },
-      {
-        path: "predictions", element: <Predictions />
-      },
-      {
-        path: "tagdetails", element: <Tagdetails />
-      },
-      {
-        path: "dashlogs", element: <DashLogs />
-      },
-      ,
-      {path: "*", element: <NotFound />}
-    ]}
-    
-  ])
-  return <RouterProvider router={router} />
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Dashboard /> },
+        { path: "/", element: <Dashboard /> },
+        { path: "livemap", element: <Livemap /> },
+        { path: "predictions", element: <Predictions /> },
+        { path: "tagdetails", element: <Tagdetails /> },
+        { path: "dashlogs", element: <DashLogs /> },
+        { path: "livemap/:sharkId", element: <SharkDetailsPage /> },
+        { path: "*", element: <NotFound /> },
+      ],
+    },
+  ]);
+
+  return (
+    <SharksProvider>
+      <RouterProvider router={router} />
+    </SharksProvider>
+  );
 }
 
 export default App;
