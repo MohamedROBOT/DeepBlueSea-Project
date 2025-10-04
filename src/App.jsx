@@ -26,6 +26,7 @@ function App() {
         { path: "livemap/:sharkId", element: <SharkDetailsPage /> },
         { path: "studentmode", element: <StudentMode /> },
         { path: "studentmode/sharkquiz", element: <SharkQuiz /> },
+       
         { path: "*", element: <NotFound /> },
       ],
     },

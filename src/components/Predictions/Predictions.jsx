@@ -476,7 +476,10 @@ export default function Dashboard() {
           <thead className="text-slate-400">
             <tr>
               <th className="border-b border-gray-700">Rank</th>
-              <th className="border-b border-gray-700">Location</th>
+              <th className="border-b flex flex-col justify-center border-gray-700">
+                Location
+                <span className="text-white">Latitude, Longitude</span>
+                </th>
               <th className="border-b border-gray-700">
                 {layer === "SST" ? "Temp (°C)" : layer === "Currents" ? "Speed (m/s)" : "Chl"}
               </th>

@@ -28,7 +28,7 @@ export default function MapField() {
   const [sharks, setSharks] = useState([]);
 
   const { selectedShark, setSelectedShark } = useSharks();
-
+  console.log(selectedShark);
   const updateEnvironmental = (key, field, newValue) => {
     const updated = {
       ...formData,
@@ -134,6 +134,8 @@ export default function MapField() {
           temperature: factor.seaTemperature,
           chlorophyll: factor.chlorophyll,
           currents: factor.currents,
+
+          //new values
           status: "Active",
           battery: Math.floor(Math.random() * 100),
           datetime: new Date().toISOString(),
@@ -158,20 +160,20 @@ export default function MapField() {
   const factorCircleColor = (factor, factorKey) => {
     if (!factor) return "rgba(255,255,255,0.3)";
     if (factorKey === "seaTemperature") {
-      if (factor.seaTemperature.includes("Cold")) return "rgba(255,0,0,0.4)";
+      if (factor.seaTemperature.includes("Cold")) return "rgba(123,194,255,1)";
       if (factor.seaTemperature.includes("Moderate"))
-        return "rgba(255,165,0,0.4)";
-      if (factor.seaTemperature.includes("Warm")) return "rgba(255,255,0,0.4)";
+        return "rgba(255,184,111,1)";
+      if (factor.seaTemperature.includes("Warm")) return "rgba(255,101,92,1)";
     }
     if (factorKey === "chlorophyll") {
       if (factor.chlorophyll === "High") return "rgba(0,128,0,0.4)";
-      if (factor.chlorophyll === "Medium") return "rgba(144,238,144,0.4)";
-      if (factor.chlorophyll === "Low") return "rgba(200,255,200,0.4)";
+      if (factor.chlorophyll === "Medium") return "rgba(150,255,234,1)";
+      if (factor.chlorophyll === "Low") return "rgba(146,149,255,1)";
     }
     if (factorKey === "currents") {
-      if (factor.currents === "Strong") return "rgba(0,0,255,0.4)";
-      if (factor.currents === "Medium") return "rgba(173,216,230,0.4)";
-      if (factor.currents === "Weak") return "rgba(200,220,255,0.4)";
+      if (factor.currents === "Strong") return "rgba(71,117,255,1)";
+      if (factor.currents === "Medium") return "rgba(174,197,254,1)";
+      if (factor.currents === "Weak") return "rgba(200,220,255,1)";
     }
     return "rgba(200,200,200,0.4)";
   };
@@ -205,30 +207,37 @@ export default function MapField() {
         <h2 className='text-lg font-semibold mb-2'>Map Instructions</h2>
 
         <div className='mb-2'>
-          <strong>Region Filter:</strong> Select an ocean to focus on a specific
-          area.
+          <strong className="text-teal-400">Region Filter:</strong> Open the filter and select the ocean
+          type you want to focus on and factors
+          <p>
+            Select the parameters you want to use for tracking sharks. Each
+            selection will automatically filter the map to show shark locations
+            by latitude and longitude. The results are based on existing data
+            already collected by our tag idea
+          </p>
+           <p> <span className="text-teal-400 underline">note</span> that current data was collected from different NASA resources to show our idea</p>
         </div>
 
         <div className='mb-2'>
           <strong>Environmental Factors:</strong>
           <ul className='ml-4 list-disc'>
             <li>
-              <span className='text-red-400'>Sea Temperature:</span>
-              <span className='ml-1 text-red-300'>Cold 0-15 °C</span> /
-              <span className='ml-1 text-orange-400'>Moderate 16-25 °C</span> /
-              <span className='ml-1 text-yellow-400'>Warm 26-30 °C</span>
+              <span className='font-bold underline'>Sea Temperature:</span>
+              <span className='ml-1 text-[#7BC2FF]'>Cold 0-15 °C</span> /
+              <span className='ml-1 text-[#FFB86F]'>Moderate 16-25 °C</span> /
+              <span className='ml-1 text-[#FF655C]'>Warm 26-30 °C</span>
             </li>
             <li>
-              <span className='text-green-400'>Chlorophyll:</span>
-              <span className='ml-1 text-green-700'>High</span> /
-              <span className='ml-1 text-green-300'>Medium</span> /
-              <span className='ml-1 text-green-100'>Low</span>
+              <span className='font-bold underline'>Chlorophyll:</span>
+              <span className='ml-1 text-[#008000]'>High</span> /
+              <span className='ml-1 text-[#96FFEA]'>Medium</span> /
+              <span className='ml-1 text-[#9295FF]'>Low</span>
             </li>
             <li>
-              <span className='text-blue-400'>Currents:</span>
-              <span className='ml-1'>Weak</span> /
-              <span className='ml-1'>Medium</span> /
-              <span className='ml-1'>Strong</span>
+              <span className='font-bold underline'>Currents:</span>
+              <span className='ml-1 text-[#C8DCFF]'>Weak</span> /
+              <span className='ml-1 text-[#AEC5FE]'>Medium</span> /
+              <span className='ml-1 text-[#4775FF]'>Strong</span>
             </li>
           </ul>
         </div>

@@ -1,13 +1,616 @@
 [
-  {"ocean": "Atlantic Ocean", "lat": 12.3, "lng": -40.5, "seaTemperature": "Moderate 16-25 °C", "chlorophyll": "High", "currents": "Medium", "pop": 5},
-  {"ocean": "Atlantic Ocean", "lat": -8.7, "lng": -25.1, "seaTemperature": "Cold 0-15 °C", "chlorophyll": "Low", "currents": "Weak", "pop": 3},
-  {"ocean": "Atlantic Ocean", "lat": 5.4, "lng": -32.8, "seaTemperature": "Warm 26-30 °C", "chlorophyll": "Medium", "currents": "Strong", "pop": 6},
-  {"ocean": "Pacific Ocean", "lat": -10.2, "lng": 150.3, "seaTemperature": "Warm 26-30 °C", "chlorophyll": "High", "currents": "Medium", "pop": 6},
-  {"ocean": "Pacific Ocean", "lat": 15.1, "lng": -125.5, "seaTemperature": "Moderate 16-25 °C", "chlorophyll": "Medium", "currents": "Weak", "pop": 5},
-  {"ocean": "Pacific Ocean", "lat": 0.5, "lng": -170.2, "seaTemperature": "Cold 0-15 °C", "chlorophyll": "Low", "currents": "Strong", "pop": 4},
-  {"ocean": "Pacific Ocean", "lat": 0.6, "lng": -160.2, "seaTemperature": "Cold 0-15 °C", "chlorophyll": "Low", "currents": "Strong", "pop": 4},
-  {"ocean": "Indian Ocean", "lat": -15.3, "lng": 80.1, "seaTemperature": "Warm 26-30 °C", "chlorophyll": "High", "currents": "Medium", "pop": 6},
-  {"ocean": "Indian Ocean", "lat": 5.7, "lng": 70.4, "seaTemperature": "Moderate 16-25 °C", "chlorophyll": "Medium", "currents": "Weak", "pop": 5},
-  {"ocean": "Southern Ocean", "lat": -60.2, "lng": 20.3, "seaTemperature": "Cold 0-15 °C", "chlorophyll": "Medium", "currents": "Weak", "pop": 3},
-  {"ocean": "Arctic Ocean", "lat": 75.4, "lng": -10.1, "seaTemperature": "Cold 0-15 °C", "chlorophyll": "Low", "currents": "Medium", "pop": 2}
+  {
+    "ocean": "Indian Ocean",
+    "lat": 7.59,
+    "lng": 51.14,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Strong",
+    "pop": 3
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": 42.63,
+    "lng": -38.74,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Strong",
+    "pop": 5
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -65.65,
+    "lng": 22.28,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 76.6,
+    "lng": 58.57,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 7
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -54.99,
+    "lng": 5.83,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 7
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": -28.1,
+    "lng": 154.46,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Strong",
+    "pop": 5
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -59.99,
+    "lng": -174.44,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 4
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": 15.09,
+    "lng": 41.67,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 6
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -37.64,
+    "lng": 98.8,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": 1.56,
+    "lng": 90.34,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -35.95,
+    "lng": 63.49,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 7
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -14.94,
+    "lng": -30.24,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 4
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -7.52,
+    "lng": 0.18,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 6
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -57.49,
+    "lng": 156.72,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 2
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 83.53,
+    "lng": 17.77,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 4
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 84.07,
+    "lng": -149.95,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -58.56,
+    "lng": 43.01,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 8
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": 37.09,
+    "lng": -55.67,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 4
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -67.77,
+    "lng": 25.15,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 2
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -3.42,
+    "lng": 70.56,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 4
+  },
+  
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 78.32,
+    "lng": -94.44,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 3
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": 19.41,
+    "lng": 87.19,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": -7.4,
+    "lng": -119.8,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+
+  {
+    "ocean": "Indian Ocean",
+    "lat": 22.92,
+    "lng": 61.76,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 3
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -58.78,
+    "lng": 116.55,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Weak",
+    "pop": 5
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -52.16,
+    "lng": 143.06,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Strong",
+    "pop": 5
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -17.59,
+    "lng": 54.21,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 8
+  },
+ 
+  {
+    "ocean": "Pacific Ocean",
+    "lat": -0.12,
+    "lng": 167.79,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 4
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -16.42,
+    "lng": -32.8,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 8
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": 42.89,
+    "lng": -57.21,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 7
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -53.6,
+    "lng": -51.97,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 84.69,
+    "lng": 46.58,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 3
+  },
+
+  {
+    "ocean": "Southern Ocean",
+    "lat": -56.33,
+    "lng": 63.18,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -58.25,
+    "lng": 13.43,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -59.62,
+    "lng": 83.2,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 4
+  },
+ 
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -28.16,
+    "lng": -6.5,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 3
+  },
+
+  {
+    "ocean": "Southern Ocean",
+    "lat": -52.26,
+    "lng": -76.55,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": 7.43,
+    "lng": 66.03,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 5
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 79.27,
+    "lng": -157.5,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -56.95,
+    "lng": 1.82,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Strong",
+    "pop": 8
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -13.73,
+    "lng": 91.17,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 7
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": 44.18,
+    "lng": -20.38,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Strong",
+    "pop": 5
+  },
+ 
+  {
+    "ocean": "Indian Ocean",
+    "lat": 0.42,
+    "lng": 104.37,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Strong",
+    "pop": 7
+  },
+ 
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": 32.74,
+    "lng": -21.7,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Strong",
+    "pop": 5
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -4.82,
+    "lng": 92.35,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 4
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 71.72,
+    "lng": -93.02,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 4
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -34.34,
+    "lng": 15.23,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": 23.81,
+    "lng": 59.34,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 8
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -24.08,
+    "lng": 68.09,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 5
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": 42.79,
+    "lng": 160.11,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Weak",
+    "pop": 6
+  },
+
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 67.94,
+    "lng": 7.66,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Weak",
+    "pop": 5
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": -31.24,
+    "lng": -89.67,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 6
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 76.45,
+    "lng": 62.13,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 4
+  },
+
+
+  {
+    "ocean": "Southern Ocean",
+    "lat": -63.48,
+    "lng": 43.12,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 7
+  },
+  {
+    "ocean": "Arctic Ocean",
+    "lat": 84.79,
+    "lng": -22.19,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Weak",
+    "pop": 8
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": -31.32,
+    "lng": 158.69,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 2
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -9.32,
+    "lng": 55.15,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 6
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -56.71,
+    "lng": -119.11,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 5
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -29.2,
+    "lng": 78.97,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -41.96,
+    "lng": 17.0,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Strong",
+    "pop": 8
+  },
+  {
+    "ocean": "Atlantic Ocean",
+    "lat": -17.41,
+    "lng": -17.53,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Medium",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -69.77,
+    "lng": -18.26,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 5
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": 35.05,
+    "lng": -141.35,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Weak",
+    "pop": 3
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -14.48,
+    "lng": 46.61,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 2
+  },
+  {
+    "ocean": "Southern Ocean",
+    "lat": -51.18,
+    "lng": -82.38,
+    "seaTemperature": "Cold 0-15 \u00b0C",
+    "chlorophyll": "High",
+    "currents": "Medium",
+    "pop": 4
+  },
+  {
+    "ocean": "Pacific Ocean",
+    "lat": 5.0,
+    "lng": 174.12,
+    "seaTemperature": "Warm 26-30 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 8
+  },
+  {
+    "ocean": "Indian Ocean",
+    "lat": -34.23,
+    "lng": 102.7,
+    "seaTemperature": "Moderate 16-25 \u00b0C",
+    "chlorophyll": "Low",
+    "currents": "Medium",
+    "pop": 5
+  }
 ]

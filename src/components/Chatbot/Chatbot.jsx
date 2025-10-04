@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { callGemini, getRecommendations } from "./ChatbotApi";
 import { FiX, FiSend } from "react-icons/fi";
 import { TbMessageChatbot } from "react-icons/tb";
@@ -20,13 +20,25 @@ export default function Chatbot() {
   });
   const [loading, setLoading] = useState(false);
   const [recommendations, setRecommendations] = useState([]);
+  const messagesEndRef = useRef(null);
 
+  // Scroll to bottom function
+  const scrollToBottom = (behavior = "smooth") => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior });
+    }
+  };
+
+  // Scroll to last message on page reload
   useEffect(() => {
+    scrollToBottom("auto"); // immediate scroll on first load
     getRecommendations(setRecommendations);
   }, []);
 
+  // Save messages and scroll when messages update
   useEffect(() => {
     localStorage.setItem("chatMessages", JSON.stringify(messages));
+    scrollToBottom(); // smooth scroll when new messages added
   }, [messages]);
 
   const handleAsk = async (customQuestion) => {
@@ -62,6 +74,7 @@ export default function Chatbot() {
     };
     setMessages([startMsg]);
     localStorage.setItem("chatMessages", JSON.stringify([startMsg]));
+    scrollToBottom("auto"); // scroll to start message
   };
 
   return (
@@ -76,17 +89,13 @@ export default function Chatbot() {
 
       {isOpen && (
         <div className='fixed bottom-6 right-6 w-80 bg-[#0d1b2a] text-white rounded-xl shadow-2xl flex flex-col h-[450px]'>
+          {/* Header */}
           <div className='flex justify-between items-center p-3 border-b border-gray-700'>
             <div className='flex flex-row-reverse items-center gap-x-2'>
               <h2 className='font-semibold'> Shark AI</h2>
               <img src={Logo} className='size-5' />
             </div>
             <div className='flex items-center gap-x-2'>
-              {/* <button
-                onClick={handleClearChat}
-                className='text-gray-400 hover:text-white text-xs border px-2 py-1 rounded-md cursor-pointer'>
-                Clear
-              </button> */}
               <button
                 onClick={() => setIsOpen(false)}
                 className='text-gray-400 hover:text-white cursor-pointer'>
@@ -95,6 +104,7 @@ export default function Chatbot() {
             </div>
           </div>
 
+          {/* Chat Messages */}
           <div className='p-5 flex flex-col flex-1 overflow-y-auto text-sm space-y-3'>
             {messages.map((msg, idx) => (
               <div
@@ -102,11 +112,13 @@ export default function Chatbot() {
                 className={`p-2 rounded-md ${
                   msg.role === "bot"
                     ? "bg-blue-900/50 me-12 text-left self-start"
-                    : "bg-blue-600  ms-12  self-end  text-right"
+                    : "bg-blue-600 ms-12 self-end text-right"
                 }`}>
                 {msg.text}
               </div>
             ))}
+
+            <div ref={messagesEndRef} /> {/* Scroll target */}
 
             {loading && (
               <div className='text-gray-400 text-xs flex items-center space-x-1'>
@@ -118,23 +130,23 @@ export default function Chatbot() {
                 </span>
               </div>
             )}
-             {!loading && !question && recommendations.length > 0 && (
-            <div className='px-3 text-[13px] text-silver p-5 flex flex-wrap gap-2'>
-              Suggested Questions
-              {recommendations.map((rec, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleAsk(rec)}
-                  className='border text-white border-silver/50 text-start px-2 py-1 text-xs rounded hover:bg-gray-700'>
-                  {rec}
-                </button>
-              ))}
-            </div>
-          )}
+
+            {!loading && !question && recommendations.length > 0 && (
+              <div className='px-3 text-[13px] text-silver p-5 flex flex-wrap gap-2'>
+                Suggested Questions
+                {recommendations.map((rec, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleAsk(rec)}
+                    className='border text-white border-silver/50 text-start px-2 py-1 text-xs rounded hover:bg-gray-700'>
+                    {rec}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-         
-
+          {/* Input */}
           <div className='p-3 border-t border-gray-700 flex items-center space-x-2'>
             <textarea
               value={question}
@@ -157,9 +169,3 @@ export default function Chatbot() {
     </div>
   );
 }
-
-
-
-
-
-
